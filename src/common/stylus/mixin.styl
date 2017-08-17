@@ -1,0 +1,53 @@
+border-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    border-bottom: 1px solid $color
+    content: ' '
+
+border-top-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    border-top: 1px solid $color
+    content: ' '
+
+bg-image($url)
+  background-image: url($url + '@2x.png')
+  @media(-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3)
+    background-image: url($url + '@3x.png')
+
+border-none()
+  &:after
+    display:none
+
+border-right-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    height: 100%
+    right: 0
+    top: 0
+    border-right: 1px solid $color
+    content: ' '
+
+border-left-1px($color)
+  position: relative
+  &:after
+    display: block
+    position: absolute
+    height: 100%
+    left: 0
+    top: 0
+    border-left: 1px solid $color
+    content: ' '
+
